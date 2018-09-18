@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature-class</title>
+</head>
+<body>
+<script>
+    let temperature = function(c){
+        this.c = c;
+        this.f = function(){
+            return 1.8*this.c + 32;
+        }
+        this.k = function(){
+            return this.c + 273.5;
+        }
+    }
+    let c = new temperature();
+    c.c = 25;
+    alert ("độ f: " + c.f() + " độ K: " + c.k());
+</script>
+</body>
+</html>
